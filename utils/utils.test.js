@@ -15,9 +15,43 @@ it('should add two numbers', () => {
 it('should square a number', () => {
     var res = utils.square(3);
 
-    expect(res).toBe(9).toBeA('numbex');
+    expect(res).toBe(9).toBeA('number');
 
     // if (res !== 9) {
     //     throw new Error(`Expected 9, but got ${res}`);
     // }
 });
+
+it('should verify first and last names are set', () => {
+    var user = {location: 'Thailand', age: 23};
+    var res = utils.setName(user, 'Ronnakorn Suwanchatree');
+
+   expect(res).toInclude({
+       firstName: 'Ronnakorn',
+       lastName: 'Suwanchatree'
+   });
+});
+
+// it('should expect some values', () => {
+//    // expect(12).toNotBe(11);
+//    // expect({name: 'andrew'}).toNotEqual({name: 'Andrew'});
+//    // expect('A').toBe('A');
+//    // expect([2,3,4]).toInclude(2);
+//    // expect([2,3,4]).toExclude(5);
+//    //  expect({
+//    //      name: 'Ronnakorn',
+//    //      age: 23,
+//    //      location: 'Thailand'
+//    //  }).toInclude({
+//    //      age: 23
+//    //  });
+//
+//     expect({
+//         name: 'Ronnakorn',
+//         age: 23,
+//         location: 'Thailand'
+//     }).toExclude({
+//         age: 21
+//     });
+//
+// });
